@@ -1,0 +1,23 @@
+{
+  "name": "node-blindtest-webhook",
+  "version": "1.0.0",
+  "description": "DialogFlow Webhook For CronosLab BlindTest",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "DialogFlow",
+    "nodejs",
+    "natural-language"
+  ],
+  "author": "Gillariel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fuzzyset.js": "0.0.4",
+    "got": "^8.2.0",
+    "request": "^2.83.0"
+  }
+}
