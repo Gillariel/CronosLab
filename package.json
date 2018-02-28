@@ -1,0 +1,19 @@
+{
+  "name": "node-webhook-stubs",
+  "version": "1.0.0",
+  "description": "Webhook Stubs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "webhook"
+    "node.js"
+  ],
+  "author": "Gillariel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+  }
+}
