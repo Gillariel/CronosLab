@@ -4,9 +4,10 @@ This is the main repo for the March's Cronos Lab
 
 # Workshop instructions
 
-* [Pizza Shop]()
-* [To Do List]()
-* [Blindtest]()
+* [Presentation Slides](https://drive.google.com/open?id=1G_48oVxW0N2edYSLy051mQ3OxEpVsrtgTiW5BSRQ9EM)
+* [Pizza Shop](https://drive.google.com/open?id=1oMc1Wmx1HnXqaoc6Di7H3WcCizVOL_BD9LYfc35WdNo)
+* [To Do List](https://drive.google.com/open?id=1SX54k7yfCe8fH1wplAuu8FH5LmB-xk3sgKPk-kVfzJA)
+* [Blindtest](https://drive.google.com/open?id=1o3t4IaQ0iYV15Q_9GTNku6q94wRsv3eVnbr37gFnrY0)
 
 # Stubs
 
