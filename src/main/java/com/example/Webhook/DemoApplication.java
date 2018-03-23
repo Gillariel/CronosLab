@@ -125,7 +125,7 @@ public class DemoApplication {
 	}
 
 	public MongoClient getDatabaseConnection() {
-		MongoClientURI uri = new MongoClientURI("mongodb://<USER_NAME>:<PASSWORD>@pizzashop-db-shard-00-00-g0r5a.mongodb.net:27017,pizzashop-db-shard-00-01-g0r5a.mongodb.net:27017,pizzashop-db-shard-00-02-g0r5a.mongodb.net:27017/test?ssl=true&replicaSet=PizzaSHop-DB-shard-0&authSource=admin");
+		MongoClientURI uri = new MongoClientURI("mongodb://suli94:Suli200414@pizzashop-db-shard-00-00-g0r5a.mongodb.net:27017,pizzashop-db-shard-00-01-g0r5a.mongodb.net:27017,pizzashop-db-shard-00-02-g0r5a.mongodb.net:27017/test?ssl=true&replicaSet=PizzaSHop-DB-shard-0&authSource=admin");
 		return new MongoClient(uri);
 	}
 	
