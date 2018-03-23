@@ -121,7 +121,7 @@ public class DemoApplication {
 			Document doc = iterator.next();
 			favoritePizza = doc.getString("pizza");
 		}
-		return favoritePizza;
+		return favoritePizza; 
 	}
 
 	public MongoClient getDatabaseConnection() {
