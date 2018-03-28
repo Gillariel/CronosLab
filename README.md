@@ -5,10 +5,11 @@ REST Api providing all you need to create a DialogFlow project with webhook acce
 # Technologies
   Node.js :
   - Express
+  - Firebase
 
 # Install
 
-Just run "npm install" to install the node modules.
+Run "npm install" to install the node modules.
 Then just host the project wherever you want (Heroku is a good free solution)
 
 # How to use
@@ -16,3 +17,6 @@ Then just host the project wherever you want (Heroku is a good free solution)
 - /categories
 - /songs
 - /score
+- /scores
+
+ See [documentation](https://desolate-bastion-37509.herokuapp.com/docs/) for more information
