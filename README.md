@@ -23,7 +23,8 @@ Here is the Stubs available for the workshop :
 * [DialogFlow](https://console.dialogflow.com/api-client/#/login)
 * [Google Cloud Platform](https://console.cloud.google.com)
 * [Heroku](https://www.heroku.com)
-* [Firebase](https://console.firebase.google.com/)<br/><br/>* [DialogFlow Docs](https://dialogflow.com/docs/getting-started/basics)
+* [Firebase](https://console.firebase.google.com/)<br/><br/>
+* [DialogFlow Docs](https://dialogflow.com/docs/getting-started/basics)
 * [DialogFlow Forum](https://productforums.google.com/forum/#!forum/dialogflow)
 * [SSML For Google Assistant](https://developers.google.com/actions/reference/ssml)
 * [Firebase NoSql](https://firebase.google.com/docs/firestore/)
