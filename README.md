@@ -23,10 +23,11 @@ Here is the Stubs available for the workshop :
 * [DialogFlow Docs](https://dialogflow.com/docs/getting-started/basics)
 * [DialogFlow Forum](https://productforums.google.com/forum/#!forum/dialogflow)
 * [SSML For Google Assistant](https://developers.google.com/actions/reference/ssml)
+* [Firebase NoSql](https://firebase.google.com/docs/firestore/)
+* [MongoDB](https://docs.mongodb.com/)
 * [Webhook Definition](https://en.wikipedia.org/wiki/Webhook)
 
-# Workshop Solutions
+# Api
 
-* [BlindTest Webhook (Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_Webhook)
-* [BlindTest API (Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_API)
-* [To Do List (C#)](https://github.com/Gillariel/CronosLab/tree/C#_ToDo)
+ * [BlindTest Custom Api](https://desolate-bastion-37509.herokuapp.com)
+ * [Approximate string comparison JS](https://glench.github.io/fuzzyset.js/)
