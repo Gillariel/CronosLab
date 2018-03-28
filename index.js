@@ -4,8 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const restService = express();
 const source = "Node BlindTest";
-//const swaggerUI = require('swagger-ui-express'),
-//    swaggerDoc = require('./swagger.json');
+const swaggerUI = require('swagger-ui-express'),
+    swaggerDoc = require('./swagger.json');
 
 const admin = require('firebase-admin');
 var serviceAccount = require('./service-account-key.json');
@@ -18,7 +18,7 @@ restService.use(
     })
 );
 restService.use(bodyParser.json());
-//restService.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
+restService.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 
 
 //Param : <Playlist Name>, optional <index> 
@@ -54,7 +54,7 @@ restService.post('/songs', function(req, res) {
         console.log("Index received : " + index);
         db.collection('playlists').doc(playlist).collection('songs').get()
         .then(docs => { 
-            if (docs.size < index)
+            if (docs.size <= index)
                 return res.json({
                     "Warning": "Not so many songs"
                 });
@@ -94,7 +94,7 @@ restService.get('/categories', function(req, res) {
     });
 });
 
-restService.get('/score', function(req, res) {
+restService.get('/scores', function(req, res) {
     var users = [];
     db.collection('users').get()
     .then(docUsers => {
@@ -113,6 +113,28 @@ restService.get('/score', function(req, res) {
     }).catch(err => {
         console.log("error: " + err);
     })
+});
+
+restService.get('/score/:pseudo', function(req, res) {
+    var pseudo = req.params.pseudo;
+    getScores(pseudo, function(user) {
+        if(user !== "undefined")
+            res.json(user);
+        else{
+            res.json({"Warning": "No User found"});
+        }
+    });
+});
+
+restService.post('/score', function(req, res) {
+    var pseudo = req.body.pseudo;
+    var playlist = req.body.playlist;
+    var score = req.body.score;
+    addScore(pseudo, playlist, score, function(callback) {
+        callback
+            ?    res.json("Ok")
+            :    res.json("Not ok");
+    });
 });
 
 function getScores(pseudo, callback) {
@@ -137,6 +159,17 @@ function getScores(pseudo, callback) {
         callback({});
     });
 };
+
+function addScore(pseudo, playlist, score, callback) {
+    var currentScore;
+    newScore = {};
+    db.collection('users').doc(pseudo).collection('scores').doc(playlist).get()
+    .then(score => { currentScore = score.data(); }).catch(err => { callback(false);});
+    newScore.Less = score < currentScore.Less ? score : currentScore.Less ;
+    newScore.Best = score > currentScore.Best ? score : currentScore.Best ;
+    var average = (newScore.Less + newScore.Best) / 2;
+    callback(true);
+}
 
 restService.listen(process.env.PORT || 8000, function() {
     console.log("Server up and listening");

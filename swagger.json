@@ -1,0 +1,319 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Blind Test API",
+        "description": "API for managing a simple blind test on Google Home as Demo",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "desolate-bastion-37509.herokuapp.com/",
+    "basePath": "",
+    "tags": [
+        {
+            "name": "Blind Test API",
+            "description": "API for managing a simple blind test on Google Home as Demo"
+        }
+    ],
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get all categories",
+                "description": "Get all existing categories",
+                "parameters": [],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The list of categories",
+                        "schema": {
+                            "type": "string",
+                            "example": "80'"
+                        }
+                    }
+                }
+            }
+        },
+        "/songs": {
+            "post": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Get a song or a all song of a playlist",
+                "description": "Get song(s) for the provided playlist with or without passing an index",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "playlist",
+                        "type": "string",
+                        "required": true,
+                        "description": "The name of the playlist"
+                    },{
+                        "in": "path",
+                        "name": "index",
+                        "type": "integer",
+                        "required": false,
+                        "description": "Wanted index of the song"   
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The corresponding song(s)",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Index": {
+                                    "type": "integer",
+                                    "description": "The song index"
+                                },
+                                "Title": {
+                                    "type": "string",
+                                    "description": "The title of the song"
+                                },
+                                "Url": {
+                                    "type": "string",
+                                    "description": "Url of the song on storage (do not forget to replace '&' with '&amp;')"
+                                }
+                            },
+                            "example": {
+                                "Index": 12,
+                                "Title": "Paint it black",
+                                "Url": "https://mysong.com/3462635843323563.mp3"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/scores": {
+            "get": {
+                "tags": [
+                    "Score"
+                ],
+                "summary": "Get all scores",
+                "description": "Get all scores of all users",
+                "parameters": [],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The score of each users by playlist name",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "pseudo": {
+                                        "type": "string",
+                                        "description": "Pseudo of the user"
+                                    },
+                                    "playlists": {
+                                        "type": "object",
+                                        "properties": {
+                                            "Index": {
+                                                "type": "object",
+                                                "properties":{
+                                                    "Name": {
+                                                        "type": "string",
+                                                        "description": "Name of the playlist"
+                                                    },
+                                                    "Average": {
+                                                        "type": "number",
+                                                        "description": "Average score"
+                                                    },
+                                                    "Best": {
+                                                        "type": "integer",
+                                                        "description": "Best score"
+                                                    },
+                                                    "Less": {
+                                                        "type": "integer",
+                                                        "description": "Worst score"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "example": [
+                                {
+                                    "pseudo" : "Nathan",
+                                    "playlists": {
+                                        "0": {
+                                            "Name": "80'",
+                                            "Average": 6.5,
+                                            "Best": 9,
+                                            "Less": 4
+                                        },
+                                        "1": {
+                                            "Name": "70'",
+                                            "Average": 6.5,
+                                            "Best": 9,
+                                            "Less": 4
+                                        }
+                                    }
+                                },{ 
+                                    "pseudo": "Suli",
+                                    "playlists": {
+                                        "0": {
+                                            "Name": "80'",
+                                            "Average": 7.5,
+                                            "Best": 9,
+                                            "Less": 6
+                                        },
+                                        "1": {
+                                            "Name": "70'",
+                                            "Average": 6,
+                                            "Best": 9,
+                                            "Less": 3
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/score": {
+            "post": {
+                "tags": [
+                    "Score"
+                ],
+                "summary": "Add a score",
+                "description": "Post a score for a user",
+                "parameters": [
+                    {
+                        "in": "path", 
+                        "name": "pseudo",
+                        "type": "string",
+                        "description": "The pseudo of the user",
+                        "required": true
+                    },{
+                        "in": "path", 
+                        "name": "playlist",
+                        "type": "string",
+                        "description": "The playlist to set the score for",
+                        "required": true
+                    },{
+                        "in": "path", 
+                        "name": "score",
+                        "type": "integer",
+                        "description": "The score",
+                        "required": true
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "result of the query",
+                        "schema": {
+                            "type": "string",
+                            "description": "result of the query",
+                            "enum": ["Ok", "Not ok"]
+                        }
+                    }
+                }
+            }
+        },
+        "/score/{pseudo}": {
+            "get": {
+                "tags": [
+                    "Score"
+                ],
+                "summary": "Get a score",
+                "description": "Get all existing categories",
+                "parameters": [{
+                    "in": "path",
+                    "name": "pseudo",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true,
+                    "description": "The pseudo of the user"
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The scores of this user",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "pseudo": {
+                                    "type": "string",
+                                    "description": "Pseudo of the user"
+                                },
+                                "playlists": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Index": {
+                                            "type": "object",
+                                            "properties":{
+                                                "Name": {
+                                                    "type": "string",
+                                                    "description": "Name of the playlist"
+                                                },
+                                                "Average": {
+                                                    "type": "number",
+                                                    "description": "Average score"
+                                                },
+                                                "Best": {
+                                                    "type": "integer",
+                                                    "description": "Best score"
+                                                },
+                                                "Less": {
+                                                    "type": "integer",
+                                                    "description": "Worst score"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "example": {
+                                "pseudo" : "Nathan",
+                                "playlists": {
+                                    "0": {
+                                        "Name": "80'",
+                                        "Average": 6.5,
+                                        "Best": 9,
+                                        "Less": 4
+                                    },
+                                    "1": {
+                                        "Name": "70'",
+                                        "Average": 6.5,
+                                        "Best": 9,
+                                        "Less": 4
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
