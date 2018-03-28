@@ -1,0 +1,11 @@
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\bin\Any CPU\Release\netcoreapp2.0\WebHook.deps.json
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\bin\Any CPU\Release\netcoreapp2.0\WebHook.runtimeconfig.json
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\bin\Any CPU\Release\netcoreapp2.0\WebHook.runtimeconfig.dev.json
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\bin\Any CPU\Release\netcoreapp2.0\WebHook.dll
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\bin\Any CPU\Release\netcoreapp2.0\WebHook.pdb
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.csprojResolveAssemblyReference.cache
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.csproj.CoreCompileInputs.cache
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.AssemblyInfoInputs.cache
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.AssemblyInfo.cs
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.dll
+C:\Users\Nathan Foerster\source\repos\WebHook\WebHook\obj\Any CPU\Release\netcoreapp2.0\WebHook.pdb
