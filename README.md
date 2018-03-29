@@ -15,7 +15,7 @@ Pay attention by working in C#, you have to deploy your apps on Azure which requ
 Here is the Stubs available for the workshop :
 * [Node JS Webhook](https://github.com/Gillariel/CronosLab/tree/Node_Webhook_Stub)
 * [Java Webhook](https://github.com/Gillariel/CronosLab/tree/Java_Webhook_Stub) 
-* [C# Webhook](https://github.com/Gillariel/CronosLab/tree/C#_Webhook_Stub) 
+* [C# Webhook](https://github.com/Gillariel/CronosLab/tree/C%23_Webhook_Stub) 
 * [Python Webhook](https://github.com/Gillariel/CronosLab/tree/Python_Webhook_Stub) 
 
 # Useful Links
@@ -41,5 +41,5 @@ Here is the Stubs available for the workshop :
 
  * [BlindTest Webhook (DF + Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_Webhook)
  * [BlindTest API (DF + Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_API)
- * [To Do List (DF + C#)](https://github.com/Gillariel/CronosLab/tree/C#_ToDo)
+ * [To Do List (DF + C#)](https://github.com/Gillariel/CronosLab/tree/C%23_ToDoList)
  * [PizzaShop (DF + Java)](https://github.com/Gillariel/CronosLab/tree/Java_PizzaShop)
