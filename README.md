@@ -42,4 +42,4 @@ Here is the Stubs available for the workshop :
  * [BlindTest Webhook (DF + Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_Webhook)
  * [BlindTest API (DF + Node)](https://github.com/Gillariel/CronosLab/tree/Blindtest_API)
  * [To Do List (DF + C#)](https://github.com/Gillariel/CronosLab/tree/C#_ToDo)
- * [PizzaShop (DF + Java)]
+ * [PizzaShop (DF + Java)](https://github.com/Gillariel/CronosLab/tree/Java_PizzaShop)
